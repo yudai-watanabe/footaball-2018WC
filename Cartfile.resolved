@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire" "4.7.2"
+github "Alamofire/AlamofireImage" "3.3.1"
+github "Instagram/IGListKit" "3.4.0"
+github "mchoe/SwiftSVG" "v2.1.5"

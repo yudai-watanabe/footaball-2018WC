@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ScheduleCollectionViewCell" id="gTV-IL-0wX" customClass="ScheduleCollectionViewCell" customModule="footaball_2018WC" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="315" height="108"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="315" height="108"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="X1Y-2d-bjL">
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="108"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jun 14,2018 - 08:30 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgR-xa-OtV">
+                                <rect key="frame" x="89.5" y="0.0" width="136" height="30.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uXr-iW-Uag">
+                                <rect key="frame" x="0.0" y="30.5" width="315" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Russia" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTe-wP-eej">
+                                        <rect key="frame" x="0.0" y="16.5" width="91.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KOH-xS-ylE">
+                                        <rect key="frame" x="111.5" y="12.5" width="92" height="22.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MtI-3I-f23">
+                                                <rect key="frame" x="0.0" y="0.5" width="32" height="22.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="HIg-4Z-KyJ"/>
+                                                    <constraint firstAttribute="width" constant="32" id="yxg-7V-Zpj"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOx-tG-izH">
+                                                <rect key="frame" x="42" y="0.5" width="8" height="22.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QSu-fV-FDv">
+                                                <rect key="frame" x="60" y="0.5" width="32" height="22.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="32" id="jFw-wD-noO"/>
+                                                    <constraint firstAttribute="height" constant="22" id="k1Z-9s-c3f"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="MOx-tG-izH" firstAttribute="centerX" secondItem="KOH-xS-ylE" secondAttribute="centerX" id="9uX-V1-gc6"/>
+                                            <constraint firstAttribute="height" constant="22" id="bxe-D7-12a"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Russia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AH-q8-leu">
+                                        <rect key="frame" x="223.5" y="16.5" width="91.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NV-3Q-YGo">
+                                <rect key="frame" x="134.5" y="77.5" width="46.5" height="30.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uXr-iW-Uag" secondAttribute="trailing" id="Qoj-Nn-VgB"/>
+                            <constraint firstItem="uXr-iW-Uag" firstAttribute="leading" secondItem="X1Y-2d-bjL" secondAttribute="leading" id="brY-LZ-sCe"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.15686274509803921" green="0.16470588235294117" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="X1Y-2d-bjL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ajb-B9-rVI"/>
+                <constraint firstItem="X1Y-2d-bjL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BTr-iH-N4H"/>
+                <constraint firstAttribute="bottom" secondItem="X1Y-2d-bjL" secondAttribute="bottom" id="Lsr-Lr-vbk"/>
+                <constraint firstAttribute="trailing" secondItem="X1Y-2d-bjL" secondAttribute="trailing" id="oiA-AJ-UjG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="315" height="108"/>
+            <connections>
+                <outlet property="awayTeamCrest" destination="QSu-fV-FDv" id="x3E-9O-ADM"/>
+                <outlet property="awayTeamName" destination="3AH-q8-leu" id="5Uh-K7-wAT"/>
+                <outlet property="date" destination="bgR-xa-OtV" id="CZN-Uw-hKI"/>
+                <outlet property="groupName" destination="1NV-3Q-YGo" id="3QR-8T-Ffa"/>
+                <outlet property="homeTeamCrest" destination="MtI-3I-f23" id="f5Z-5c-uL4"/>
+                <outlet property="homeTeamName" destination="XTe-wP-eej" id="NuG-pI-rXY"/>
+            </connections>
+            <point key="canvasLocation" x="163.5" y="114"/>
+        </collectionViewCell>
+    </objects>
+</document>
