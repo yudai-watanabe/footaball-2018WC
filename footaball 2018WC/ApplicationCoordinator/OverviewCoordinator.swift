@@ -13,15 +13,15 @@ class OverviewCoordinator: Coordinator {
     
     let presenter: UINavigationController
     
-//    private let overviewViewController
+    private let overviewViewController: OverviewViewController
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
-        
+        self.overviewViewController = OverviewViewController.instantiateFromStoryBoard() as! OverviewViewController
     }
     
     func start() {
-//        presenter.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
-    }    
+        presenter.pushViewController(overviewViewController, animated: true)
+    }
     
 }

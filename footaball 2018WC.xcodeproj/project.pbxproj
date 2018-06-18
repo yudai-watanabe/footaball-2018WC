@@ -13,6 +13,9 @@
 		374A4BBB20D22523004DDFF8 /* SwiftSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374A4BBA20D22523004DDFF8 /* SwiftSVG.framework */; };
 		374A4BBE20D2543D004DDFF8 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BBD20D2543D004DDFF8 /* BaseRepository.swift */; };
 		374A4BC220D2575A004DDFF8 /* FixturesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BC120D2575A004DDFF8 /* FixturesRepository.swift */; };
+		374A4BC520D76388004DDFF8 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BC420D76388004DDFF8 /* OverviewViewController.swift */; };
+		374A4BC720D76397004DDFF8 /* OverviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374A4BC620D76397004DDFF8 /* OverviewViewController.storyboard */; };
+		374A4BC920D7A78C004DDFF8 /* UIView + Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BC820D7A78C004DDFF8 /* UIView + Radius.swift */; };
 		37F30F7620CF66BC00C599B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30F7520CF66BC00C599B0 /* AppDelegate.swift */; };
 		37F30F7820CF66BC00C599B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30F7720CF66BC00C599B0 /* ViewController.swift */; };
 		37F30F7B20CF66BC00C599B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F30F7920CF66BC00C599B0 /* Main.storyboard */; };
@@ -64,6 +67,9 @@
 		374A4BBA20D22523004DDFF8 /* SwiftSVG.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSVG.framework; path = Carthage/Build/iOS/SwiftSVG.framework; sourceTree = "<group>"; };
 		374A4BBD20D2543D004DDFF8 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		374A4BC120D2575A004DDFF8 /* FixturesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesRepository.swift; sourceTree = "<group>"; };
+		374A4BC420D76388004DDFF8 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		374A4BC620D76397004DDFF8 /* OverviewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OverviewViewController.storyboard; sourceTree = "<group>"; };
+		374A4BC820D7A78C004DDFF8 /* UIView + Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Radius.swift"; sourceTree = "<group>"; };
 		37F30F7220CF66BC00C599B0 /* footaball 2018WC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "footaball 2018WC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F30F7520CF66BC00C599B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37F30F7720CF66BC00C599B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +149,15 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		374A4BC320D762C9004DDFF8 /* OverView */ = {
+			isa = PBXGroup;
+			children = (
+				374A4BC420D76388004DDFF8 /* OverviewViewController.swift */,
+				374A4BC620D76397004DDFF8 /* OverviewViewController.storyboard */,
+			);
+			path = OverView;
+			sourceTree = "<group>";
+		};
 		37F30F6920CF66BC00C599B0 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +234,7 @@
 		37F30FB120CFA39200C599B0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				374A4BC320D762C9004DDFF8 /* OverView */,
 				37F30FCC20D0AA4C00C599B0 /* Info */,
 				37F30FB620CFA3DE00C599B0 /* Schedule */,
 			);
@@ -239,6 +255,7 @@
 			children = (
 				37F30FB820CFB15800C599B0 /* UIViewController + Base.swift */,
 				37F30FBA20CFB31300C599B0 /* NSObject + Base.swift */,
+				374A4BC820D7A78C004DDFF8 /* UIView + Radius.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -396,6 +413,7 @@
 			files = (
 				37F30FC220CFB8E100C599B0 /* ScheduleCollectionViewCell.xib in Resources */,
 				37F30FB520CFA3D900C599B0 /* ScheduleViewController.storyboard in Resources */,
+				374A4BC720D76397004DDFF8 /* OverviewViewController.storyboard in Resources */,
 				37F30F8020CF66BE00C599B0 /* LaunchScreen.storyboard in Resources */,
 				37F30FD020D0AA7A00C599B0 /* InfoViewController.storyboard in Resources */,
 				37F30F7D20CF66BE00C599B0 /* Assets.xcassets in Resources */,
@@ -455,12 +473,14 @@
 				37F30FB320CFA3CD00C599B0 /* ScheduleViewController.swift in Sources */,
 				37F30FAD20CF92A700C599B0 /* TableCoordinator.swift in Sources */,
 				37F30FB920CFB15800C599B0 /* UIViewController + Base.swift in Sources */,
+				374A4BC920D7A78C004DDFF8 /* UIView + Radius.swift in Sources */,
 				37F30FA920CF8E6C00C599B0 /* OverviewCoordinator.swift in Sources */,
 				37F30F7620CF66BC00C599B0 /* AppDelegate.swift in Sources */,
 				374A4BBE20D2543D004DDFF8 /* BaseRepository.swift in Sources */,
 				37F30FA520CF68F800C599B0 /* ApplicationCoordinator.swift in Sources */,
 				37F30FA720CF775000C599B0 /* DetailTabCoordinator.swift in Sources */,
 				37F30FC120CFB8E100C599B0 /* ScheduleCollectionViewCell.swift in Sources */,
+				374A4BC520D76388004DDFF8 /* OverviewViewController.swift in Sources */,
 				37F30FC920CFC78C00C599B0 /* Fixture.swift in Sources */,
 				37F30FBB20CFB31300C599B0 /* NSObject + Base.swift in Sources */,
 			);

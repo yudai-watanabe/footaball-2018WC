@@ -11,7 +11,7 @@ import IGListKit
 struct Sched: Entity {
     
     let count: Int
-    let fixtures: Schedule
+    let fixtures: Array<Fixture>
     
     enum CodingKeys: String, CodingKey {
         case count
@@ -19,6 +19,34 @@ struct Sched: Entity {
     }
     
 }
+
+struct Fixture: Entity {
+    
+    let date: String
+    let homeTeamName: String
+    let awayTeamName: String
+    let goalsResult: GoalsResult
+    
+    enum CodingKeys: String, CodingKey {
+        case date
+        case homeTeamName
+        case awayTeamName
+        case goalsResult = "result"
+    }
+}
+
+struct GoalsResult: Entity {
+    
+    let goalsHomeTeam: Int?
+    let goalsAwayTeam: Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case goalsHomeTeam
+        case goalsAwayTeam
+    }
+    
+}
+
 
 class Schedule: Entity {
 
@@ -36,12 +64,7 @@ class Schedule: Entity {
 
 }
 
-struct GoalsResult: Entity {
 
-    let goalsHomeTeam: Int
-    let goalsAwayTeam: Int
-
-}
 
 extension Schedule: ListDiffable {
 
@@ -53,7 +76,10 @@ extension Schedule: ListDiffable {
         guard let objectSchedule = object as? Schedule else {
             fatalError()
         }
-        return self.date == objectSchedule.date
+        return self.date == objectSchedule.date ||
+            self.awayTeamName == objectSchedule.awayTeamName ||
+            self.homeTeamName == objectSchedule.homeTeamName 
+        
     }
 
 }

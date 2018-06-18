@@ -13,12 +13,13 @@ import IGListKit
 protocol ScheduleViewControllerDelegate: class {
     
     func scheduleViewController(_ viewController: ScheduleViewController, tapped infoButton: UIButton)
+    func scheduleViewController(_ viewController: ScheduleViewController, tapped schedule: Schedule)
     
 }
 
 class ScheduleViewController: UIViewController {
     
-    let data: Array<ListDiffable> = [
+    var data: Array<ListDiffable> = [
         Schedule(date: "2018-06-14T15:00:00Z",
                  homeTeamName: "Russia",
                  awayTeamName: "Saudi Arabia",
@@ -38,8 +39,12 @@ class ScheduleViewController: UIViewController {
         adapter.collectionView = self.collectionView
         adapter.dataSource = self
         // Do any additional setup after loading the view.
-        let closure: ((Sched?) -> Void)? = {schedule in
-                print("aaaa")
+        let closure: ((Sched?) -> Void)? = {[weak self] schedule in
+            let a = schedule?.fixtures.map {
+                Schedule(date: $0.date, homeTeamName: $0.homeTeamName, awayTeamName: $0.awayTeamName, goalsResult: $0.goalsResult)
+            }
+            self?.data = a!
+            self?.adapter.reloadData(completion: nil)
         }
         
         FixturesRepository().get(complation: closure)
@@ -76,7 +81,10 @@ extension ScheduleViewController: ListAdapterDataSource {
 
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         switch object {
-        case is Schedule: return ScheduleSectionController()
+        case is Schedule:
+            let scheduleSC = ScheduleSectionController()
+            scheduleSC.delegate = self
+            return scheduleSC
         default: fatalError()
         }
     }
@@ -85,5 +93,11 @@ extension ScheduleViewController: ListAdapterDataSource {
         return nil
     }
 
+}
+
+extension ScheduleViewController: ScheduleSectionControllerDelegate {
+    func scheduleSectionController(section: ScheduleSectionController, tapped schedule: Schedule) {
+        delegate?.scheduleViewController(self, tapped: schedule)
+    }
 
 }

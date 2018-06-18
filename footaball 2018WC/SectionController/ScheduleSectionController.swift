@@ -10,7 +10,13 @@ import Foundation
 import IGListKit
 import UIKit
 
+protocol ScheduleSectionControllerDelegate: NSObjectProtocol {
+    func scheduleSectionController(section: ScheduleSectionController, tapped schedule: Schedule)
+}
+
 class ScheduleSectionController: ListSectionController {
+    
+    var delegate: ScheduleSectionControllerDelegate?
     
     private var schedule: Schedule?
     
@@ -32,6 +38,12 @@ class ScheduleSectionController: ListSectionController {
         cell.schedule = schedule
         return cell
         
+    }
+    
+    override func didSelectItem(at index: Int) {
+        if let schedule = self.schedule {
+            delegate?.scheduleSectionController(section: self, tapped: schedule)
+        }
     }
     
 }
