@@ -15,13 +15,16 @@ class OverviewCoordinator: Coordinator {
     
     private let overviewViewController: OverviewViewController
     
-    init(presenter: UINavigationController) {
+    init(presenter: UINavigationController, schedule: Schedule) {
         self.presenter = presenter
         self.overviewViewController = OverviewViewController.instantiateFromStoryBoard() as! OverviewViewController
+        self.overviewViewController.title = "Overview"
+        self.overviewViewController.tabBarItem.image = #imageLiteral(resourceName: "tab_overView")
+        self.overviewViewController.schedule = schedule
     }
     
     func start() {
-        presenter.pushViewController(overviewViewController, animated: true)
+        presenter.pushViewController(overviewViewController, animated: false)
     }
     
 }

@@ -11,7 +11,8 @@ import UIKit
 
 class DetailTabCoordinator: Coordinator {
     
-    let presenter: UITabBarController
+    let window: UIWindow
+    let tabBarController: UITabBarController
     
     let overviewNavigationController = UINavigationController()
     let statsNavigationViewController = UINavigationController()
@@ -21,21 +22,34 @@ class DetailTabCoordinator: Coordinator {
     let statsCoordinator: StatsCoordinator
     let tableCoordinator: TableCoordinator
     
-    init(presenter: UITabBarController) {
-        self.presenter = presenter
-        self.overviewCoordinator = OverviewCoordinator(presenter: overviewNavigationController)
+    let viewControllers: Array<UINavigationController>
+    
+    init(window: UIWindow, schedule: Schedule) {
+        self.window = window
+        self.tabBarController = UITabBarController()
+        
+        self.overviewCoordinator = OverviewCoordinator(presenter: overviewNavigationController, schedule: schedule)
         self.statsCoordinator = StatsCoordinator(presenter: statsNavigationViewController)
         self.tableCoordinator = TableCoordinator(presenter: tableNavigationController)
-        let viewControllers: Array<UINavigationController> = [overviewNavigationController,
-                                                              statsNavigationViewController,
-                                                              tableNavigationController]
+        self.viewControllers = [
+            overviewNavigationController,
+            statsNavigationViewController,
+            tableNavigationController
+        ]
+        self.tabBarController.setViewControllers(viewControllers, animated: false)
+        self.tabBarController.tabBar.tintColor = .white
+        self.tabBarController.tabBar.barTintColor = .clear
+    }
 
-        self.presenter.setViewControllers(viewControllers, animated: false)
-        self.presenter.tabBar.tintColor = .black
+    func start() {
+        self.window.rootViewController?.present(tabBarController, animated: true, completion: nil)
+        self.overviewCoordinator.start()
+        self.statsCoordinator.start()
+        self.tableCoordinator.start()
     }
     
-    func start() {
-        print("a")
-    }
+//    func startFlow() {
+//        currentCoordinator?.start
+//    }
     
 }

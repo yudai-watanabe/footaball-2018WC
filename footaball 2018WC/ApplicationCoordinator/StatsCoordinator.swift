@@ -13,15 +13,17 @@ class StatsCoordinator: Coordinator {
     
     let presenter: UINavigationController
     
-    //    private let statsViewController
+    private let statsViewController: StatsViewController
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
-        
+        self.statsViewController = StatsViewController.instantiateFromStoryBoard() as! StatsViewController
+        self.statsViewController.title = "Stats"
+        self.statsViewController.tabBarItem.image = #imageLiteral(resourceName: "tab_stats")
     }
     
     func start() {
-        //        presenter.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
+        presenter.pushViewController(statsViewController, animated: false)
     }
     
 }

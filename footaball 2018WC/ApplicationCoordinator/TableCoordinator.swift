@@ -13,15 +13,17 @@ class TableCoordinator: Coordinator {
     
     let presenter: UINavigationController
     
-    //    private let tableViewController
+    private let tableViewController: TableViewController
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
-        
+        self.tableViewController = TableViewController.instantiateFromStoryBoard() as! TableViewController
+        self.tableViewController.title = "Table"
+        self.tableViewController.tabBarItem.image = #imageLiteral(resourceName: "tab_table")
     }
     
     func start() {
-        //        presenter.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
+        presenter.pushViewController(tableViewController, animated: false)
     }
     
 }

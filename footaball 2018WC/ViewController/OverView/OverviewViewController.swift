@@ -9,7 +9,14 @@
 import UIKit
 
 class OverviewViewController: UIViewController {
-
+    
+    public var schedule: Schedule?
+    
+    @IBOutlet weak var homeTeamNameLabel: UILabel!
+    @IBOutlet weak var awayTeamNameLabel: UILabel!
+    @IBOutlet weak var homeTeamGoalLabel: UILabel!
+    @IBOutlet weak var awayTeamGoalLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +28,17 @@ class OverviewViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewDidLayoutSubviews() {
+        self.homeTeamNameLabel.text = schedule?.homeTeamName
+        self.awayTeamNameLabel.text = schedule?.awayTeamName
+        self.homeTeamGoalLabel.text = schedule?.goalsResult.goalsHomeTeam?.description
+        self.awayTeamGoalLabel.text = schedule?.goalsResult.goalsAwayTeam?.description
+    }
+    
+    @IBAction func selectedCloseButton(_ sender: Any) {
+        self.tabBarController?.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

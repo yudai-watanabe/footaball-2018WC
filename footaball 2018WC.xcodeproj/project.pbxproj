@@ -15,7 +15,11 @@
 		374A4BC220D2575A004DDFF8 /* FixturesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BC120D2575A004DDFF8 /* FixturesRepository.swift */; };
 		374A4BC520D76388004DDFF8 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BC420D76388004DDFF8 /* OverviewViewController.swift */; };
 		374A4BC720D76397004DDFF8 /* OverviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374A4BC620D76397004DDFF8 /* OverviewViewController.storyboard */; };
-		374A4BC920D7A78C004DDFF8 /* UIView + Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BC820D7A78C004DDFF8 /* UIView + Radius.swift */; };
+		374A4BC920D7A78C004DDFF8 /* UIView + Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BC820D7A78C004DDFF8 /* UIView + Base.swift */; };
+		374A4BCD20D89182004DDFF8 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BCC20D89182004DDFF8 /* StatsViewController.swift */; };
+		374A4BCF20D891AB004DDFF8 /* StatsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374A4BCE20D891AB004DDFF8 /* StatsViewController.storyboard */; };
+		374A4BD120D8925B004DDFF8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BD020D8925B004DDFF8 /* TableViewController.swift */; };
+		374A4BD320D8926C004DDFF8 /* TableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374A4BD220D8926C004DDFF8 /* TableViewController.storyboard */; };
 		37F30F7620CF66BC00C599B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30F7520CF66BC00C599B0 /* AppDelegate.swift */; };
 		37F30F7820CF66BC00C599B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30F7720CF66BC00C599B0 /* ViewController.swift */; };
 		37F30F7B20CF66BC00C599B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F30F7920CF66BC00C599B0 /* Main.storyboard */; };
@@ -69,7 +73,11 @@
 		374A4BC120D2575A004DDFF8 /* FixturesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesRepository.swift; sourceTree = "<group>"; };
 		374A4BC420D76388004DDFF8 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		374A4BC620D76397004DDFF8 /* OverviewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OverviewViewController.storyboard; sourceTree = "<group>"; };
-		374A4BC820D7A78C004DDFF8 /* UIView + Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Radius.swift"; sourceTree = "<group>"; };
+		374A4BC820D7A78C004DDFF8 /* UIView + Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Base.swift"; sourceTree = "<group>"; };
+		374A4BCC20D89182004DDFF8 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		374A4BCE20D891AB004DDFF8 /* StatsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StatsViewController.storyboard; sourceTree = "<group>"; };
+		374A4BD020D8925B004DDFF8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		374A4BD220D8926C004DDFF8 /* TableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableViewController.storyboard; sourceTree = "<group>"; };
 		37F30F7220CF66BC00C599B0 /* footaball 2018WC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "footaball 2018WC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F30F7520CF66BC00C599B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37F30F7720CF66BC00C599B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +166,24 @@
 			path = OverView;
 			sourceTree = "<group>";
 		};
+		374A4BCA20D89135004DDFF8 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				374A4BCC20D89182004DDFF8 /* StatsViewController.swift */,
+				374A4BCE20D891AB004DDFF8 /* StatsViewController.storyboard */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		374A4BCB20D89157004DDFF8 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				374A4BD020D8925B004DDFF8 /* TableViewController.swift */,
+				374A4BD220D8926C004DDFF8 /* TableViewController.storyboard */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
 		37F30F6920CF66BC00C599B0 = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +260,8 @@
 		37F30FB120CFA39200C599B0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				374A4BCB20D89157004DDFF8 /* Table */,
+				374A4BCA20D89135004DDFF8 /* Stats */,
 				374A4BC320D762C9004DDFF8 /* OverView */,
 				37F30FCC20D0AA4C00C599B0 /* Info */,
 				37F30FB620CFA3DE00C599B0 /* Schedule */,
@@ -255,7 +283,7 @@
 			children = (
 				37F30FB820CFB15800C599B0 /* UIViewController + Base.swift */,
 				37F30FBA20CFB31300C599B0 /* NSObject + Base.swift */,
-				374A4BC820D7A78C004DDFF8 /* UIView + Radius.swift */,
+				374A4BC820D7A78C004DDFF8 /* UIView + Base.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -414,7 +442,9 @@
 				37F30FC220CFB8E100C599B0 /* ScheduleCollectionViewCell.xib in Resources */,
 				37F30FB520CFA3D900C599B0 /* ScheduleViewController.storyboard in Resources */,
 				374A4BC720D76397004DDFF8 /* OverviewViewController.storyboard in Resources */,
+				374A4BCF20D891AB004DDFF8 /* StatsViewController.storyboard in Resources */,
 				37F30F8020CF66BE00C599B0 /* LaunchScreen.storyboard in Resources */,
+				374A4BD320D8926C004DDFF8 /* TableViewController.storyboard in Resources */,
 				37F30FD020D0AA7A00C599B0 /* InfoViewController.storyboard in Resources */,
 				37F30F7D20CF66BE00C599B0 /* Assets.xcassets in Resources */,
 				37F30F7B20CF66BC00C599B0 /* Main.storyboard in Resources */,
@@ -462,6 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374A4BD120D8925B004DDFF8 /* TableViewController.swift in Sources */,
 				37F30FD320D11F0600C599B0 /* ScheduleSectionController.swift in Sources */,
 				37F30FAF20CFA18900C599B0 /* InfoCoordinator.swift in Sources */,
 				37F30FAB20CF927B00C599B0 /* StatsCoordinator.swift in Sources */,
@@ -473,7 +504,8 @@
 				37F30FB320CFA3CD00C599B0 /* ScheduleViewController.swift in Sources */,
 				37F30FAD20CF92A700C599B0 /* TableCoordinator.swift in Sources */,
 				37F30FB920CFB15800C599B0 /* UIViewController + Base.swift in Sources */,
-				374A4BC920D7A78C004DDFF8 /* UIView + Radius.swift in Sources */,
+				374A4BC920D7A78C004DDFF8 /* UIView + Base.swift in Sources */,
+				374A4BCD20D89182004DDFF8 /* StatsViewController.swift in Sources */,
 				37F30FA920CF8E6C00C599B0 /* OverviewCoordinator.swift in Sources */,
 				37F30F7620CF66BC00C599B0 /* AppDelegate.swift in Sources */,
 				374A4BBE20D2543D004DDFF8 /* BaseRepository.swift in Sources */,
@@ -660,6 +692,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUCG9T2HC3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -681,6 +714,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUCG9T2HC3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

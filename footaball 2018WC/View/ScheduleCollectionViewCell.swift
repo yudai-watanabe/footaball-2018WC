@@ -19,7 +19,7 @@ class ScheduleCollectionViewCell: UICollectionViewCell {
             self.homeTeamName.text = schedule?.homeTeamName
             self.awayTeamName.text = schedule?.awayTeamName
             if let homeTeamName = schedule?.homeTeamName.replacingOccurrences(of: " ", with: ""),
-                let homeTeamCrestURL = Team(rawValue: homeTeamName)?.getCrestURL() {
+                let _ = Team(rawValue: homeTeamName)?.getCrestURL() {
 //                let image = UIView(SVGURL: homeTeamCrestURL) {svgLayer in
 //                    svgLayer.resizeToFit(self.homeTeamCrest.bounds)
 //                    self.homeTeamCrest.layer.addSublayer(svgLayer)

@@ -21,18 +21,15 @@ class ApplicationCoordinator: Coordinator {
     let detailTabBarController = UITabBarController()
     let infoNavigationController = UINavigationController()
     
-    let detailTabCoordinator: DetailTabCoordinator
     let infoCoordinator: InfoCoordinator
-    let overViewCoordinator: OverviewCoordinator
+
     
     init(window: UIWindow) {
         guard let scheduleViewController = ScheduleViewController.instantiateFromStoryBoard() as? ScheduleViewController else {
             fatalError("cant make scheduleVC")
         }
         self.window = window
-        self.detailTabCoordinator = DetailTabCoordinator(presenter: detailTabBarController)
         self.infoCoordinator = InfoCoordinator(presenter: rootViewController)
-        self.overViewCoordinator = OverviewCoordinator(presenter: rootViewController)
         scheduleViewController.delegate = self
         self.rootViewController.pushViewController(scheduleViewController, animated: false)
     }
@@ -46,7 +43,8 @@ class ApplicationCoordinator: Coordinator {
 
 extension ApplicationCoordinator: ScheduleViewControllerDelegate {
     func scheduleViewController(_ viewController: ScheduleViewController, tapped schedule: Schedule) {
-        self.overViewCoordinator.start()
+        let detailTabCoordinator = DetailTabCoordinator(window: self.window, schedule: schedule)
+        detailTabCoordinator.start()
     }
     
     func scheduleViewController(_ viewController: ScheduleViewController, tapped infoButton: UIButton) {
