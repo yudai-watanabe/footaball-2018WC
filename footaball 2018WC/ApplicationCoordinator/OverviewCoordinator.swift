@@ -15,16 +15,28 @@ class OverviewCoordinator: Coordinator {
     
     private let overviewViewController: OverviewViewController
     
+    public var closedAction: (() -> Void)?
+    
     init(presenter: UINavigationController, schedule: Schedule) {
         self.presenter = presenter
         self.overviewViewController = OverviewViewController.instantiateFromStoryBoard() as! OverviewViewController
         self.overviewViewController.title = "Overview"
         self.overviewViewController.tabBarItem.image = #imageLiteral(resourceName: "tab_overView")
         self.overviewViewController.schedule = schedule
+        self.overviewViewController.delegate = self
     }
     
     func start() {
         presenter.pushViewController(overviewViewController, animated: false)
     }
+    
+}
+
+extension OverviewCoordinator: OverviewViewControllerDelegate {
+    
+    func overviewViewControllerClosedButtonClicked(_ viewController: OverviewViewController) {
+        self.closedAction?()
+    }
+    
     
 }

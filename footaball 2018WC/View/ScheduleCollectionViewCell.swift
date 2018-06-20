@@ -15,22 +15,18 @@ class ScheduleCollectionViewCell: UICollectionViewCell {
 
     var schedule: Schedule? {
         didSet{
-            self.date.text = schedule?.date.description
-            self.homeTeamName.text = schedule?.homeTeamName
-            self.awayTeamName.text = schedule?.awayTeamName
-            if let homeTeamName = schedule?.homeTeamName.replacingOccurrences(of: " ", with: ""),
-                let _ = Team(rawValue: homeTeamName)?.getCrestURL() {
-//                let image = UIView(SVGURL: homeTeamCrestURL) {svgLayer in
-//                    svgLayer.resizeToFit(self.homeTeamCrest.bounds)
-//                    self.homeTeamCrest.layer.addSublayer(svgLayer)
-//                }
-//                 self.homeTeamCrest.addSubview(image)
+            guard let schedule = schedule else {
+                fatalError()
             }
-            
-//            if let awayTeamName = schedule?.awayTeamName.replacingOccurrences(of: " ", with: ""),
-//                let awayTeamCrestURL = Team(rawValue: awayTeamName)?.getCrestURL() {
-//                //self.awayTeamCrest = UIImageView(SVGURL: awayTeamCrestURL)
-//            }
+            self.date.text = schedule.date.description
+            self.homeTeamName.text = schedule.homeTeamName
+            self.awayTeamName.text = schedule.awayTeamName
+            if let crest = Team(rawValue: schedule.homeTeamName)?.getCrest() {
+                self.homeTeamCrest.text = crest
+            }
+            if let crest = Team(rawValue: schedule.awayTeamName)?.getCrest() {
+                self.awayTeamCrest.text = crest
+            }
             
         }
     }
@@ -39,6 +35,6 @@ class ScheduleCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var groupName: UILabel!
     @IBOutlet weak var homeTeamName: UILabel!
     @IBOutlet weak var awayTeamName: UILabel!
-    @IBOutlet weak var homeTeamCrest: UIImageView!
-    @IBOutlet weak var awayTeamCrest: UIImageView!
+    @IBOutlet weak var homeTeamCrest: UILabel!
+    @IBOutlet weak var awayTeamCrest: UILabel!
 }

@@ -20,6 +20,7 @@
 		374A4BCF20D891AB004DDFF8 /* StatsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374A4BCE20D891AB004DDFF8 /* StatsViewController.storyboard */; };
 		374A4BD120D8925B004DDFF8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BD020D8925B004DDFF8 /* TableViewController.swift */; };
 		374A4BD320D8926C004DDFF8 /* TableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374A4BD220D8926C004DDFF8 /* TableViewController.storyboard */; };
+		37D6660B20DA5B1500EE5BB3 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6660A20DA5B1500EE5BB3 /* Statistics.swift */; };
 		37F30F7620CF66BC00C599B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30F7520CF66BC00C599B0 /* AppDelegate.swift */; };
 		37F30F7820CF66BC00C599B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30F7720CF66BC00C599B0 /* ViewController.swift */; };
 		37F30F7B20CF66BC00C599B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F30F7920CF66BC00C599B0 /* Main.storyboard */; };
@@ -78,6 +79,7 @@
 		374A4BCE20D891AB004DDFF8 /* StatsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StatsViewController.storyboard; sourceTree = "<group>"; };
 		374A4BD020D8925B004DDFF8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		374A4BD220D8926C004DDFF8 /* TableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableViewController.storyboard; sourceTree = "<group>"; };
+		37D6660A20DA5B1500EE5BB3 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		37F30F7220CF66BC00C599B0 /* footaball 2018WC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "footaball 2018WC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F30F7520CF66BC00C599B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37F30F7720CF66BC00C599B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 			children = (
 				37F30FC820CFC78C00C599B0 /* Fixture.swift */,
 				37F30FCA20CFCA5600C599B0 /* Entity.swift */,
+				37D6660A20DA5B1500EE5BB3 /* Statistics.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				37F30FC120CFB8E100C599B0 /* ScheduleCollectionViewCell.swift in Sources */,
 				374A4BC520D76388004DDFF8 /* OverviewViewController.swift in Sources */,
 				37F30FC920CFC78C00C599B0 /* Fixture.swift in Sources */,
+				37D6660B20DA5B1500EE5BB3 /* Statistics.swift in Sources */,
 				37F30FBB20CFB31300C599B0 /* NSObject + Base.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

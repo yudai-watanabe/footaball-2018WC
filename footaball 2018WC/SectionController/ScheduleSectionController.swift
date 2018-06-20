@@ -16,6 +16,11 @@ protocol ScheduleSectionControllerDelegate: NSObjectProtocol {
 
 class ScheduleSectionController: ListSectionController {
     
+    override init() {
+        super.init()
+        self.inset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+    }
+    
     var delegate: ScheduleSectionControllerDelegate?
     
     private var schedule: Schedule?

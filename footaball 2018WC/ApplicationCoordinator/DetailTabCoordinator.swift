@@ -39,6 +39,10 @@ class DetailTabCoordinator: Coordinator {
         self.tabBarController.setViewControllers(viewControllers, animated: false)
         self.tabBarController.tabBar.tintColor = .white
         self.tabBarController.tabBar.barTintColor = .clear
+        
+        self.overviewCoordinator.closedAction = {
+            self.tabBarController.dismiss(animated: true, completion: nil)
+        }
     }
 
     func start() {

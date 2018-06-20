@@ -8,14 +8,22 @@
 
 import UIKit
 
+protocol OverviewViewControllerDelegate: class {
+    func overviewViewControllerClosedButtonClicked(_ viewController: OverviewViewController)
+}
+
 class OverviewViewController: UIViewController {
     
     public var schedule: Schedule?
     
-    @IBOutlet weak var homeTeamNameLabel: UILabel!
-    @IBOutlet weak var awayTeamNameLabel: UILabel!
+    weak var delegate: OverviewViewControllerDelegate?
+    
+    @IBOutlet weak var homeTeamCrestLabel: UILabel!
+    @IBOutlet weak var awayTeamCrestLabel: UILabel!
     @IBOutlet weak var homeTeamGoalLabel: UILabel!
     @IBOutlet weak var awayTeamGoalLabel: UILabel!
+    @IBOutlet weak var homeTeamNameLabel: UILabel!
+    @IBOutlet weak var awayTeamNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,15 +37,25 @@ class OverviewViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        self.homeTeamNameLabel.text = schedule?.homeTeamName
-        self.awayTeamNameLabel.text = schedule?.awayTeamName
-        self.homeTeamGoalLabel.text = schedule?.goalsResult.goalsHomeTeam?.description
-        self.awayTeamGoalLabel.text = schedule?.goalsResult.goalsAwayTeam?.description
+        guard let schedule = schedule else {
+            fatalError()
+        }
+        if let crest = Team(rawValue: schedule.homeTeamName)?.getCrest() {
+            self.homeTeamCrestLabel.text = crest
+        }
+        if let crest = Team(rawValue: schedule.awayTeamName)?.getCrest() {
+            self.awayTeamCrestLabel.text = crest
+        }
+        self.homeTeamNameLabel.text = schedule.homeTeamName
+        self.awayTeamNameLabel.text = schedule.awayTeamName
+        self.homeTeamGoalLabel.text = schedule.goalsResult.goalsHomeTeam?.description
+        self.awayTeamGoalLabel.text = schedule.goalsResult.goalsAwayTeam?.description
     }
     
-    @IBAction func selectedCloseButton(_ sender: Any) {
-        self.tabBarController?.dismiss(animated: true, completion: nil)
+    @IBAction func tappedCloseButton(_ sender: Any) {
+        self.delegate?.overviewViewControllerClosedButtonClicked(self)
     }
+    
     
     /*
     // MARK: - Navigation

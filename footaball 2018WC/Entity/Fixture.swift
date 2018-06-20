@@ -8,18 +8,6 @@
 
 import IGListKit
 
-struct Sched: Entity {
-    
-    let count: Int
-    let fixtures: Array<Fixture>
-    
-    enum CodingKeys: String, CodingKey {
-        case count
-        case fixtures
-    }
-    
-}
-
 struct Fixture: Entity {
     
     let date: String
@@ -57,8 +45,8 @@ class Schedule: Entity {
 
     init(date: String, homeTeamName: String, awayTeamName: String, goalsResult: GoalsResult) {
         self.date = date
-        self.homeTeamName = homeTeamName
-        self.awayTeamName = awayTeamName
+        self.homeTeamName = homeTeamName.replacingOccurrences(of: " ", with: "")
+        self.awayTeamName = awayTeamName.replacingOccurrences(of: " ", with: "")
         self.goalsResult = goalsResult
     }
 

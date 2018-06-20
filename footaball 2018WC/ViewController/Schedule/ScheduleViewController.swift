@@ -19,12 +19,7 @@ protocol ScheduleViewControllerDelegate: class {
 
 class ScheduleViewController: UIViewController {
     
-    var data: Array<ListDiffable> = [
-        Schedule(date: "2018-06-14T15:00:00Z",
-                 homeTeamName: "Russia",
-                 awayTeamName: "Saudi Arabia",
-                 goalsResult: GoalsResult.init(goalsHomeTeam: 0, goalsAwayTeam: 0))
-    ]
+    var data: Array<ListDiffable> = []
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -40,10 +35,10 @@ class ScheduleViewController: UIViewController {
         adapter.dataSource = self
         // Do any additional setup after loading the view.
         let closure: ((Sched?) -> Void)? = {[weak self] schedule in
-            let a = schedule?.fixtures.map {
+            let schedules = schedule?.fixtures.map {
                 Schedule(date: $0.date, homeTeamName: $0.homeTeamName, awayTeamName: $0.awayTeamName, goalsResult: $0.goalsResult)
             }
-            self?.data = a!
+            self?.data = schedules!
             self?.adapter.reloadData(completion: nil)
         }
         
