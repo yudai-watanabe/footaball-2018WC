@@ -34,11 +34,12 @@ class ScheduleViewController: UIViewController {
         adapter.collectionView = self.collectionView
         adapter.dataSource = self
         // Do any additional setup after loading the view.
-        let closure: ((Sched?) -> Void)? = {[weak self] schedule in
-            let schedules = schedule?.fixtures.map {
-                Schedule(date: $0.date, homeTeamName: $0.homeTeamName, awayTeamName: $0.awayTeamName, goalsResult: $0.goalsResult)
+        let closure: ((Array<Match>?) -> Void)? = {[weak self] match in
+            let matches = match?.map {
+                Schedule(date:  $0.datetime, stadium: $0.location, location: $0.venue,
+                         home: $0.homeTeam, away: $0.awayTeam)
             }
-            self?.data = schedules!
+            self?.data = matches!
             self?.adapter.reloadData(completion: nil)
         }
         

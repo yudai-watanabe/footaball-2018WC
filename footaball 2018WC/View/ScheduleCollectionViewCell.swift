@@ -19,15 +19,10 @@ class ScheduleCollectionViewCell: UICollectionViewCell {
                 fatalError()
             }
             self.date.text = schedule.date.description
-            self.homeTeamName.text = schedule.homeTeamName
-            self.awayTeamName.text = schedule.awayTeamName
-            if let crest = Team(rawValue: schedule.homeTeamName)?.getCrest() {
-                self.homeTeamCrest.text = crest
-            }
-            if let crest = Team(rawValue: schedule.awayTeamName)?.getCrest() {
-                self.awayTeamCrest.text = crest
-            }
-            
+            self.homeTeamName.text = schedule.homeTeam.country
+            self.awayTeamName.text = schedule.awayTeam.country
+            self.homeTeamCrest.text = schedule.homeTeamCrest
+            self.awayTeamCrest.text = schedule.awayTeamCrest
         }
     }
     

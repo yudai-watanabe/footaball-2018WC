@@ -35,24 +35,27 @@ struct GoalsResult: Entity {
     
 }
 
-
 class Schedule: Entity {
 
     let date: String
-    let homeTeamName: String
-    let awayTeamName: String
-    let goalsResult: GoalsResult
+    let stadium: String
+    let location: String
+    let homeTeam: Country
+    let awayTeam: Country
+    let homeTeamCrest: String?
+    let awayTeamCrest: String?
 
-    init(date: String, homeTeamName: String, awayTeamName: String, goalsResult: GoalsResult) {
+    init(date: String, stadium: String, location: String, home: Country, away: Country) {
         self.date = date
-        self.homeTeamName = homeTeamName.replacingOccurrences(of: " ", with: "")
-        self.awayTeamName = awayTeamName.replacingOccurrences(of: " ", with: "")
-        self.goalsResult = goalsResult
+        self.stadium = stadium
+        self.location = location
+        self.homeTeam = home
+        self.awayTeam = away
+        self.homeTeamCrest = Team(rawValue: home.country.replacingOccurrences(of: " ", with: ""))?.getCrest()
+        self.awayTeamCrest = Team(rawValue: away.country.replacingOccurrences(of: " ", with: ""))?.getCrest()
     }
 
 }
-
-
 
 extension Schedule: ListDiffable {
 
@@ -65,9 +68,9 @@ extension Schedule: ListDiffable {
             fatalError()
         }
         return self.date == objectSchedule.date ||
-            self.awayTeamName == objectSchedule.awayTeamName ||
-            self.homeTeamName == objectSchedule.homeTeamName 
-        
+            self.homeTeam.country == objectSchedule.homeTeam.country ||
+            self.awayTeam.country == objectSchedule.awayTeam.country
+
     }
 
 }

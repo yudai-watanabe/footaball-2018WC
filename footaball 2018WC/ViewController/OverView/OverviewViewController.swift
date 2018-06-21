@@ -24,6 +24,8 @@ class OverviewViewController: UIViewController {
     @IBOutlet weak var awayTeamGoalLabel: UILabel!
     @IBOutlet weak var homeTeamNameLabel: UILabel!
     @IBOutlet weak var awayTeamNameLabel: UILabel!
+    @IBOutlet weak var stadiumLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,31 +42,18 @@ class OverviewViewController: UIViewController {
         guard let schedule = schedule else {
             fatalError()
         }
-        if let crest = Team(rawValue: schedule.homeTeamName)?.getCrest() {
-            self.homeTeamCrestLabel.text = crest
-        }
-        if let crest = Team(rawValue: schedule.awayTeamName)?.getCrest() {
-            self.awayTeamCrestLabel.text = crest
-        }
-        self.homeTeamNameLabel.text = schedule.homeTeamName
-        self.awayTeamNameLabel.text = schedule.awayTeamName
-        self.homeTeamGoalLabel.text = schedule.goalsResult.goalsHomeTeam?.description
-        self.awayTeamGoalLabel.text = schedule.goalsResult.goalsAwayTeam?.description
+        
+        self.homeTeamCrestLabel.text = schedule.homeTeamCrest
+        self.awayTeamCrestLabel.text = schedule.awayTeamCrest
+        self.homeTeamNameLabel.text = schedule.homeTeam.code
+        self.awayTeamNameLabel.text = schedule.awayTeam.code
+        self.homeTeamGoalLabel.text = schedule.homeTeam.goals?.description
+        self.awayTeamGoalLabel.text = schedule.awayTeam.goals?.description
+        self.stadiumLabel.text = schedule.stadium
+        self.locationLabel.text = schedule.location
     }
     
     @IBAction func tappedCloseButton(_ sender: Any) {
         self.delegate?.overviewViewControllerClosedButtonClicked(self)
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

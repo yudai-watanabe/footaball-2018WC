@@ -14,6 +14,6 @@ struct FixturesRepository: Repository {
     let url: String
     
     init() {
-        self.url = "http://api.football-data.org/v1/competitions/467/fixtures"
+        self.url = "https://worldcup.sfg.io/matches"
     }
 }
