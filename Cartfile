@@ -1,3 +1,4 @@
 github "Instagram/IGListKit" ~> 3.0
 github "Alamofire/AlamofireImage" ~> 3.3
 github "mchoe/SwiftSVG" ~> 2.1.5
+github "ReactiveX/RxSwift" ~> 4.0

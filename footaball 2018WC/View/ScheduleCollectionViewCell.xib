@@ -23,38 +23,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="315" height="108"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jun 14,2018 - 08:30 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgR-xa-OtV">
-                                <rect key="frame" x="89.5" y="0.0" width="136" height="30.5"/>
+                                <rect key="frame" x="89.5" y="0.0" width="136" height="42.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uXr-iW-Uag">
-                                <rect key="frame" x="0.0" y="30.5" width="315" height="47"/>
+                                <rect key="frame" x="0.0" y="42.5" width="315" height="65.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Russia" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTe-wP-eej">
-                                        <rect key="frame" x="0.0" y="16.5" width="91.5" height="14.5"/>
+                                        <rect key="frame" x="0.0" y="25.5" width="91.5" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KOH-xS-ylE">
-                                        <rect key="frame" x="111.5" y="12.5" width="92" height="22.5"/>
+                                        <rect key="frame" x="111.5" y="21.5" width="92" height="22.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🇷🇺" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvq-Dp-4qh">
-                                                <rect key="frame" x="0.0" y="0.5" width="32" height="22.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="22.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOx-tG-izH">
-                                                <rect key="frame" x="42" y="0.5" width="8" height="22.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="42" y="0.0" width="10" height="22.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <color key="textColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🇸🇦" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hp-Q9-XLa">
-                                                <rect key="frame" x="60" y="0.5" width="32" height="22.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="62" y="0.0" width="30" height="22.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -65,19 +65,13 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Russia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AH-q8-leu">
-                                        <rect key="frame" x="223.5" y="16.5" width="91.5" height="14.5"/>
+                                        <rect key="frame" x="223.5" y="25.5" width="91.5" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NV-3Q-YGo">
-                                <rect key="frame" x="134.5" y="77.5" width="46.5" height="30.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="uXr-iW-Uag" secondAttribute="trailing" id="Qoj-Nn-VgB"/>
@@ -86,7 +80,7 @@
                     </stackView>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.15686274509803921" green="0.16470588235294117" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.2636447482638889" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="X1Y-2d-bjL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ajb-B9-rVI"/>
                 <constraint firstItem="X1Y-2d-bjL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BTr-iH-N4H"/>
@@ -95,11 +89,15 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="315" height="108"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="awayTeamCrest" destination="2hp-Q9-XLa" id="ZcQ-Sm-LQD"/>
                 <outlet property="awayTeamName" destination="3AH-q8-leu" id="5Uh-K7-wAT"/>
                 <outlet property="date" destination="bgR-xa-OtV" id="CZN-Uw-hKI"/>
-                <outlet property="groupName" destination="1NV-3Q-YGo" id="3QR-8T-Ffa"/>
                 <outlet property="homeTeamCrest" destination="xvq-Dp-4qh" id="cmy-p7-RHy"/>
                 <outlet property="homeTeamName" destination="XTe-wP-eej" id="NuG-pI-rXY"/>
             </connections>

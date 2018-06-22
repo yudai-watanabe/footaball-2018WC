@@ -265,9 +265,18 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="45h-AX-ocD">
+                                <rect key="frame" x="16" y="458.5" width="343" height="192.5"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490200000001" green="0.14117647059999999" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="5Tg-k9-Wss" firstAttribute="trailing" secondItem="45h-AX-ocD" secondAttribute="trailing" constant="16" id="6Ab-aT-h2J"/>
                             <constraint firstItem="iSj-cJ-4Rg" firstAttribute="leading" secondItem="5Tg-k9-Wss" secondAttribute="leading" id="9fO-7W-xsV"/>
                             <constraint firstItem="pCu-rp-EaG" firstAttribute="leading" secondItem="5Tg-k9-Wss" secondAttribute="leading" constant="16" id="Cmr-ZD-r2C"/>
                             <constraint firstItem="iSj-cJ-4Rg" firstAttribute="top" secondItem="5Tg-k9-Wss" secondAttribute="top" constant="40" id="GLx-gS-Ihq"/>
@@ -276,8 +285,11 @@
                             <constraint firstItem="pCu-rp-EaG" firstAttribute="top" secondItem="C9M-rc-8OZ" secondAttribute="bottom" constant="22" id="TYX-i0-50D"/>
                             <constraint firstItem="CwD-IP-vGV" firstAttribute="top" secondItem="iSj-cJ-4Rg" secondAttribute="bottom" constant="20" id="UCM-b0-DaR"/>
                             <constraint firstItem="CwD-IP-vGV" firstAttribute="leading" secondItem="5Tg-k9-Wss" secondAttribute="leading" id="ZtB-DS-bZf"/>
+                            <constraint firstItem="45h-AX-ocD" firstAttribute="leading" secondItem="5Tg-k9-Wss" secondAttribute="leading" constant="16" id="aEB-os-Geq"/>
                             <constraint firstItem="5Tg-k9-Wss" firstAttribute="trailing" secondItem="iSj-cJ-4Rg" secondAttribute="trailing" id="ay1-6E-xhq"/>
+                            <constraint firstItem="5Tg-k9-Wss" firstAttribute="bottom" secondItem="45h-AX-ocD" secondAttribute="bottom" constant="16" id="fOg-g1-9Rs"/>
                             <constraint firstItem="C9M-rc-8OZ" firstAttribute="top" secondItem="CwD-IP-vGV" secondAttribute="bottom" constant="32" id="kpA-b8-n6K"/>
+                            <constraint firstItem="45h-AX-ocD" firstAttribute="top" secondItem="pCu-rp-EaG" secondAttribute="bottom" constant="22" id="sfl-hG-yoN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Tg-k9-Wss"/>
                     </view>
@@ -289,7 +301,9 @@
                         <outlet property="homeTeamGoalLabel" destination="9uo-Cm-znz" id="aI4-e7-sHY"/>
                         <outlet property="homeTeamNameLabel" destination="lO7-7W-cGx" id="Ru5-QB-xaA"/>
                         <outlet property="locationLabel" destination="gQs-xc-k5e" id="fl8-YZ-Blf"/>
+                        <outlet property="mapView" destination="45h-AX-ocD" id="FrU-tk-uWa"/>
                         <outlet property="stadiumLabel" destination="CRr-vm-1o2" id="vNN-Yx-Rru"/>
+                        <outlet property="startDateLabel" destination="xsI-kt-cFi" id="Ekk-wY-WOB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPY-JT-rzu" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ru-nN-VI0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="xpN-9s-DVF">
+            <objects>
+                <viewController id="4ru-nN-VI0" customClass="LoginViewController" customModule="footaball_2018WC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GGb-K1-j4O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEk-vs-Lh7">
+                                <rect key="frame" x="16" y="208" width="343" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56M-dB-HNh">
+                                        <rect key="frame" x="32" y="200" width="279" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="B5r-4v-FME"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.13725490200000001" green="0.14117647059999999" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tappedButton:" destination="4ru-nN-VI0" eventType="touchUpInside" id="ZWr-HQ-YS8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="56M-dB-HNh" secondAttribute="bottom" constant="20" id="INq-La-uQT"/>
+                                    <constraint firstItem="56M-dB-HNh" firstAttribute="centerX" secondItem="YEk-vs-Lh7" secondAttribute="centerX" id="ONg-3e-r2z"/>
+                                    <constraint firstItem="56M-dB-HNh" firstAttribute="leading" secondItem="YEk-vs-Lh7" secondAttribute="leading" constant="32" id="aVJ-wJ-cPB"/>
+                                    <constraint firstAttribute="height" constant="250" id="lPg-nj-jts"/>
+                                    <constraint firstAttribute="trailing" secondItem="56M-dB-HNh" secondAttribute="trailing" constant="32" id="zET-81-acx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13725490200000001" green="0.14117647059999999" blue="0.1647058824" alpha="0.40464469178082191" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YEk-vs-Lh7" firstAttribute="centerY" secondItem="GGb-K1-j4O" secondAttribute="centerY" id="HBt-Us-YNs"/>
+                            <constraint firstItem="Cvk-TJ-eOw" firstAttribute="trailing" secondItem="YEk-vs-Lh7" secondAttribute="trailing" constant="16" id="XkK-cS-iXy"/>
+                            <constraint firstItem="YEk-vs-Lh7" firstAttribute="centerX" secondItem="GGb-K1-j4O" secondAttribute="centerX" id="u4X-Qf-KcQ"/>
+                            <constraint firstItem="YEk-vs-Lh7" firstAttribute="leading" secondItem="Cvk-TJ-eOw" secondAttribute="leading" constant="16" id="yJ7-kd-kXC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cvk-TJ-eOw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CvD-wr-3OF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="254" y="206"/>
+        </scene>
+    </scenes>
+</document>

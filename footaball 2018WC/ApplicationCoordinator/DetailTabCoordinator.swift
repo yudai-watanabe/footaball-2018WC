@@ -22,32 +22,34 @@ class DetailTabCoordinator: Coordinator {
     let statsCoordinator: StatsCoordinator
     let tableCoordinator: TableCoordinator
     
-    let viewControllers: Array<UINavigationController>
-    
     init(window: UIWindow, schedule: Schedule) {
         self.window = window
         self.tabBarController = UITabBarController()
         
-        self.overviewCoordinator = OverviewCoordinator(presenter: overviewNavigationController, schedule: schedule)
+        self.overviewCoordinator = OverviewCoordinator(presenter: overviewNavigationController)
         self.statsCoordinator = StatsCoordinator(presenter: statsNavigationViewController)
         self.tableCoordinator = TableCoordinator(presenter: tableNavigationController)
-        self.viewControllers = [
+        
+        let viewControllers: Array<UINavigationController> = [
             overviewNavigationController,
             statsNavigationViewController,
             tableNavigationController
         ]
-        self.tabBarController.setViewControllers(viewControllers, animated: false)
+        
+        self.tabBarController.viewControllers = viewControllers
         self.tabBarController.tabBar.tintColor = .white
         self.tabBarController.tabBar.barTintColor = .clear
         
         self.overviewCoordinator.closedAction = {
             self.tabBarController.dismiss(animated: true, completion: nil)
         }
+        
+        self.tabBarController.selectedViewController = overviewNavigationController
     }
 
     func start() {
         self.window.rootViewController?.present(tabBarController, animated: true, completion: nil)
-        self.overviewCoordinator.start()
+        //self.overviewCoordinator.start()
         self.statsCoordinator.start()
         self.tableCoordinator.start()
     }

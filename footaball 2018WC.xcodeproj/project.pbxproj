@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		370E09FC20DB35A70023AC0D /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E09FB20DB35A70023AC0D /* Match.swift */; };
+		370E0A0120DC9CAC0023AC0D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E0A0020DC9CAC0023AC0D /* LoginViewController.swift */; };
+		370E0A0320DC9CC70023AC0D /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370E0A0220DC9CC70023AC0D /* LoginViewController.storyboard */; };
+		370E0A0520DCA16C0023AC0D /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E0A0420DCA16C0023AC0D /* LoginCoordinator.swift */; };
 		374A4BB520D20C13004DDFF8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BB420D20C13004DDFF8 /* Team.swift */; };
 		374A4BB820D21581004DDFF8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374A4BB620D21581004DDFF8 /* Alamofire.framework */; };
 		374A4BB920D21581004DDFF8 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374A4BB720D21581004DDFF8 /* AlamofireImage.framework */; };
@@ -68,6 +71,9 @@
 
 /* Begin PBXFileReference section */
 		370E09FB20DB35A70023AC0D /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		370E0A0020DC9CAC0023AC0D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		370E0A0220DC9CC70023AC0D /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		370E0A0420DCA16C0023AC0D /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		374A4BB420D20C13004DDFF8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		374A4BB620D21581004DDFF8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		374A4BB720D21581004DDFF8 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
@@ -144,6 +150,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		370E09FF20DC9C8C0023AC0D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				370E0A0020DC9CAC0023AC0D /* LoginViewController.swift */,
+				370E0A0220DC9CC70023AC0D /* LoginViewController.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		374A4BB320D20B4B004DDFF8 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +272,7 @@
 				37F30FAA20CF927B00C599B0 /* StatsCoordinator.swift */,
 				37F30FAC20CF92A700C599B0 /* TableCoordinator.swift */,
 				37F30FAE20CFA18900C599B0 /* InfoCoordinator.swift */,
+				370E0A0420DCA16C0023AC0D /* LoginCoordinator.swift */,
 			);
 			path = ApplicationCoordinator;
 			sourceTree = "<group>";
@@ -264,6 +280,7 @@
 		37F30FB120CFA39200C599B0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				370E09FF20DC9C8C0023AC0D /* Login */,
 				374A4BCB20D89157004DDFF8 /* Table */,
 				374A4BCA20D89135004DDFF8 /* Stats */,
 				374A4BC320D762C9004DDFF8 /* OverView */,
@@ -452,6 +469,7 @@
 				37F30F8020CF66BE00C599B0 /* LaunchScreen.storyboard in Resources */,
 				374A4BD320D8926C004DDFF8 /* TableViewController.storyboard in Resources */,
 				37F30FD020D0AA7A00C599B0 /* InfoViewController.storyboard in Resources */,
+				370E0A0320DC9CC70023AC0D /* LoginViewController.storyboard in Resources */,
 				37F30F7D20CF66BE00C599B0 /* Assets.xcassets in Resources */,
 				37F30F7B20CF66BC00C599B0 /* Main.storyboard in Resources */,
 			);
@@ -504,6 +522,7 @@
 				37F30FAB20CF927B00C599B0 /* StatsCoordinator.swift in Sources */,
 				37F30FCB20CFCA5600C599B0 /* Entity.swift in Sources */,
 				37F30F7820CF66BC00C599B0 /* ViewController.swift in Sources */,
+				370E0A0520DCA16C0023AC0D /* LoginCoordinator.swift in Sources */,
 				374A4BB520D20C13004DDFF8 /* Team.swift in Sources */,
 				37F30FCE20D0AA6600C599B0 /* InfoViewController.swift in Sources */,
 				374A4BC220D2575A004DDFF8 /* FixturesRepository.swift in Sources */,
@@ -522,6 +541,7 @@
 				374A4BC520D76388004DDFF8 /* OverviewViewController.swift in Sources */,
 				37F30FC920CFC78C00C599B0 /* Fixture.swift in Sources */,
 				37D6660B20DA5B1500EE5BB3 /* Statistics.swift in Sources */,
+				370E0A0120DC9CAC0023AC0D /* LoginViewController.swift in Sources */,
 				37F30FBB20CFB31300C599B0 /* NSObject + Base.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
