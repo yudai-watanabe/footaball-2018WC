@@ -16,7 +16,7 @@
 		374A4BB920D21581004DDFF8 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374A4BB720D21581004DDFF8 /* AlamofireImage.framework */; };
 		374A4BBB20D22523004DDFF8 /* SwiftSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374A4BBA20D22523004DDFF8 /* SwiftSVG.framework */; };
 		374A4BBE20D2543D004DDFF8 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BBD20D2543D004DDFF8 /* BaseRepository.swift */; };
-		374A4BC220D2575A004DDFF8 /* FixturesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BC120D2575A004DDFF8 /* FixturesRepository.swift */; };
+		374A4BC220D2575A004DDFF8 /* MatchesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BC120D2575A004DDFF8 /* MatchesRepository.swift */; };
 		374A4BC520D76388004DDFF8 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BC420D76388004DDFF8 /* OverviewViewController.swift */; };
 		374A4BC720D76397004DDFF8 /* OverviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374A4BC620D76397004DDFF8 /* OverviewViewController.storyboard */; };
 		374A4BC920D7A78C004DDFF8 /* UIView + Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BC820D7A78C004DDFF8 /* UIView + Base.swift */; };
@@ -24,6 +24,7 @@
 		374A4BCF20D891AB004DDFF8 /* StatsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374A4BCE20D891AB004DDFF8 /* StatsViewController.storyboard */; };
 		374A4BD120D8925B004DDFF8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BD020D8925B004DDFF8 /* TableViewController.swift */; };
 		374A4BD320D8926C004DDFF8 /* TableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374A4BD220D8926C004DDFF8 /* TableViewController.storyboard */; };
+		3757091A20E0B59200012B17 /* TodaysMatchesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757091920E0B59200012B17 /* TodaysMatchesRepository.swift */; };
 		37D6660B20DA5B1500EE5BB3 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6660A20DA5B1500EE5BB3 /* Statistics.swift */; };
 		37F30F7620CF66BC00C599B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30F7520CF66BC00C599B0 /* AppDelegate.swift */; };
 		37F30F7820CF66BC00C599B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30F7720CF66BC00C599B0 /* ViewController.swift */; };
@@ -79,7 +80,7 @@
 		374A4BB720D21581004DDFF8 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		374A4BBA20D22523004DDFF8 /* SwiftSVG.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSVG.framework; path = Carthage/Build/iOS/SwiftSVG.framework; sourceTree = "<group>"; };
 		374A4BBD20D2543D004DDFF8 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
-		374A4BC120D2575A004DDFF8 /* FixturesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesRepository.swift; sourceTree = "<group>"; };
+		374A4BC120D2575A004DDFF8 /* MatchesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesRepository.swift; sourceTree = "<group>"; };
 		374A4BC420D76388004DDFF8 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		374A4BC620D76397004DDFF8 /* OverviewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OverviewViewController.storyboard; sourceTree = "<group>"; };
 		374A4BC820D7A78C004DDFF8 /* UIView + Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Base.swift"; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 		374A4BCE20D891AB004DDFF8 /* StatsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StatsViewController.storyboard; sourceTree = "<group>"; };
 		374A4BD020D8925B004DDFF8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		374A4BD220D8926C004DDFF8 /* TableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableViewController.storyboard; sourceTree = "<group>"; };
+		3757091920E0B59200012B17 /* TodaysMatchesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysMatchesRepository.swift; sourceTree = "<group>"; };
 		37D6660A20DA5B1500EE5BB3 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		37F30F7220CF66BC00C599B0 /* footaball 2018WC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "footaball 2018WC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F30F7520CF66BC00C599B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,7 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				374A4BBD20D2543D004DDFF8 /* BaseRepository.swift */,
-				374A4BC120D2575A004DDFF8 /* FixturesRepository.swift */,
+				374A4BC120D2575A004DDFF8 /* MatchesRepository.swift */,
+				3757091920E0B59200012B17 /* TodaysMatchesRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -525,10 +528,11 @@
 				370E0A0520DCA16C0023AC0D /* LoginCoordinator.swift in Sources */,
 				374A4BB520D20C13004DDFF8 /* Team.swift in Sources */,
 				37F30FCE20D0AA6600C599B0 /* InfoViewController.swift in Sources */,
-				374A4BC220D2575A004DDFF8 /* FixturesRepository.swift in Sources */,
+				374A4BC220D2575A004DDFF8 /* MatchesRepository.swift in Sources */,
 				37F30FB320CFA3CD00C599B0 /* ScheduleViewController.swift in Sources */,
 				37F30FAD20CF92A700C599B0 /* TableCoordinator.swift in Sources */,
 				37F30FB920CFB15800C599B0 /* UIViewController + Base.swift in Sources */,
+				3757091A20E0B59200012B17 /* TodaysMatchesRepository.swift in Sources */,
 				374A4BC920D7A78C004DDFF8 /* UIView + Base.swift in Sources */,
 				374A4BCD20D89182004DDFF8 /* StatsViewController.swift in Sources */,
 				37F30FA920CF8E6C00C599B0 /* OverviewCoordinator.swift in Sources */,

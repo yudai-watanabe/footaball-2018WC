@@ -10,13 +10,12 @@ import UIKit
 import MapKit
 
 protocol OverviewViewControllerDelegate: class {
-    func overviewViewControllerClosedButtonClicked(_ viewController: OverviewViewController)
+    func  overviewViewControllerClosedButtonClicked(_ viewController: OverviewViewController)
 }
 
 class OverviewViewController: UIViewController {
     
     private typealias Pin = MKPointAnnotation
-    
     private var pin: Pin = Pin()
     
     public var schedule: Schedule?
@@ -36,7 +35,6 @@ class OverviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.mapView.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -66,9 +64,7 @@ class OverviewViewController: UIViewController {
                 
                 self.pin.coordinate = center
                 self.pin.title = schedule.stadium
-                //if let pin = self.pin {
                 self.mapView.addAnnotation(self.pin)
-                //}
             }
         }
         
@@ -84,20 +80,12 @@ class OverviewViewController: UIViewController {
 
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
     @IBAction func tappedCloseButton(_ sender: Any) {
         self.delegate?.overviewViewControllerClosedButtonClicked(self)
     }
 }
 
-extension OverviewViewController: MKMapViewDelegate {
-//    
-//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//        let pin = MKAnnotationView(annotation: self.pin, reuseIdentifier: "stadiumPin")
-//        pin.image = #imageLiteral(resourceName: "ico_stadium")
-//        let transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-//        pin.transform = transform
-//        return pin
-//        
-//    }
-    
-}

@@ -10,6 +10,7 @@ import Foundation
 
 struct Match: Entity {
     
+    let fifaId: String
     let venue: String
     let location: String
     let status: String
@@ -20,6 +21,7 @@ struct Match: Entity {
     let awayTeam: Country
     
     enum CodingKeys: String, CodingKey {
+        case fifaId = "fifa_id"
         case venue
         case location
         case status

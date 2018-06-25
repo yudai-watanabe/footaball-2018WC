@@ -1,5 +1,5 @@
 //
-//  FixturesRepository.swift
+//  MatchesRepository.swift
 //  footaball 2018WC
 //
 //  Created by watanabe-yudai on 2018/06/14.
@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-struct FixturesRepository: Repository {
+struct MatchesRepository: Repository {
     
     let url: String
     

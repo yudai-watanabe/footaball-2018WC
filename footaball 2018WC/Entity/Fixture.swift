@@ -37,6 +37,7 @@ struct GoalsResult: Entity {
 
 class Schedule: Entity {
 
+    let id: String
     let date: String
     let stadium: String
     let location: String
@@ -45,7 +46,8 @@ class Schedule: Entity {
     let homeTeamCrest: String?
     let awayTeamCrest: String?
 
-    init(date: String, stadium: String, location: String, home: Country, away: Country) {
+    init(id: String, date: String, stadium: String, location: String, home: Country, away: Country) {
+        self.id = id
         self.date = date
         self.stadium = stadium
         self.location = location
@@ -60,7 +62,7 @@ class Schedule: Entity {
 extension Schedule: ListDiffable {
 
     func diffIdentifier() -> NSObjectProtocol {
-        return date as NSObjectProtocol
+        return id as NSObjectProtocol
     }
 
     func isEqual(toDiffableObject object: ListDiffable?) -> Bool {

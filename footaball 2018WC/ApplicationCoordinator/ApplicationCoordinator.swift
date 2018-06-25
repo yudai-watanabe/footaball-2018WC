@@ -53,8 +53,8 @@ extension ApplicationCoordinator: ScheduleViewControllerDelegate {
     }
     
     func scheduleViewController(_ viewController: ScheduleViewController, tapped infoButton: UIButton) {
-//        self.infoCoordinator.start()
-        self.loginCoordinator.start()
+        self.infoCoordinator.start()
+//        self.loginCoordinator.start()
     }
     
 }

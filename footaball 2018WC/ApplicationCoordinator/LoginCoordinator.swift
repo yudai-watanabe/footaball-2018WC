@@ -22,6 +22,7 @@ class LoginCoordinator: Coordinator {
         self.window = window
         self.loginViewController = loginVC
         self.loginViewController.modalPresentationStyle = .overCurrentContext
+        self.loginViewController.modalTransitionStyle = .crossDissolve
         self.loginViewController.delegate = self
     }
     
@@ -33,7 +34,7 @@ class LoginCoordinator: Coordinator {
 
 extension LoginCoordinator: LoginViewControllerDelegate {
     func loginViewControllerDidTappedButton(_ viewController: LoginViewController) {
-        self.loginViewController.dismiss(animated: true, completion: nil)
+        self.loginViewController.dismiss(animated: true, completion:nil)
     }
     
     

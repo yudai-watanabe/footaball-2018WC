@@ -19,9 +19,11 @@ protocol ScheduleViewControllerDelegate: class {
 
 class ScheduleViewController: UIViewController {
     
-    var data: Array<ListDiffable> = []
-
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    private var matches: Array<ListDiffable> = []
+    private var todaysMatches: Array<ListDiffable> = []
     
     weak var delegate: ScheduleViewControllerDelegate?
     
@@ -33,23 +35,35 @@ class ScheduleViewController: UIViewController {
         super.viewDidLoad()
         adapter.collectionView = self.collectionView
         adapter.dataSource = self
-        // Do any additional setup after loading the view.
-        let closure: ((Array<Match>?) -> Void)? = {[weak self] match in
-            let matches = match?.map {
-                Schedule(date:  $0.datetime, stadium: $0.location, location: $0.venue,
-                         home: $0.homeTeam, away: $0.awayTeam)
-            }
-            self?.data = matches!
-            self?.adapter.reloadData(completion: nil)
+        
+        MatchesRepository().get{[weak self] (matches: Array<Match>?) in
+            let sch = self?.converter(matches: matches)
+            self?.matches = sch!
         }
         
-        FixturesRepository().get(complation: closure)
+        TodaysMatchesRepository().get{[weak self] (matches: Array<Match>?) in
+            let sch = self?.converter(matches: matches)
+            self?.todaysMatches = sch!
+            self?.adapter.reloadData(completion: nil)
+        }
+    }
+    
+    private func converter(matches: Array<Match>?) -> Array<Schedule> {
+        guard let matches = matches else {
+            fatalError()
+        }
+        let schedules = matches.map {
+            Schedule(id: $0.fifaId, date:  $0.datetime, stadium: $0.location, location: $0.venue,
+                     home: $0.homeTeam, away: $0.awayTeam)
+        }
+        return schedules
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -58,7 +72,6 @@ class ScheduleViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        
     }
 
     @IBAction func tappedInfoButton(_ sender: Any) {
@@ -67,12 +80,27 @@ class ScheduleViewController: UIViewController {
         }
     }
     
+    @IBAction func changedValue(_ sender: Any) {
+        self.adapter.reloadData(completion: nil)
+    }
+}
+
+enum ScheduleSegment: Int {
+    case todays
+    case all
 }
 
 extension ScheduleViewController: ListAdapterDataSource {
 
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        return data
+        if let segment = ScheduleSegment(rawValue: self.segmentedControl.selectedSegmentIndex) {
+            switch segment {
+            case .todays:  return todaysMatches
+            case .all: return matches
+            }
+        }
+
+        return []
     }
 
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {

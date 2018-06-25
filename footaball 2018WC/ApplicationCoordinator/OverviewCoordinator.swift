@@ -27,7 +27,7 @@ class OverviewCoordinator: Coordinator {
     
     func start(schedule: Schedule) {
         self.overviewViewController.schedule = schedule
-        presenter.pushViewController(overviewViewController, animated: true)
+        presenter.present(overviewViewController, animated: true, completion: nil)
     }
     
     func start() {
@@ -39,7 +39,7 @@ class OverviewCoordinator: Coordinator {
 extension OverviewCoordinator: OverviewViewControllerDelegate {
     
     func overviewViewControllerClosedButtonClicked(_ viewController: OverviewViewController) {
-        self.closedAction?()
+        viewController.dismiss(animated: true, completion: nil)
     }
     
     
