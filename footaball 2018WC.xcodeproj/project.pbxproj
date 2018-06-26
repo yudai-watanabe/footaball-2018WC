@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		370E09FC20DB35A70023AC0D /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E09FB20DB35A70023AC0D /* Match.swift */; };
-		370E0A0120DC9CAC0023AC0D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E0A0020DC9CAC0023AC0D /* LoginViewController.swift */; };
-		370E0A0320DC9CC70023AC0D /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370E0A0220DC9CC70023AC0D /* LoginViewController.storyboard */; };
-		370E0A0520DCA16C0023AC0D /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E0A0420DCA16C0023AC0D /* LoginCoordinator.swift */; };
 		374A4BB520D20C13004DDFF8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BB420D20C13004DDFF8 /* Team.swift */; };
 		374A4BB820D21581004DDFF8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374A4BB620D21581004DDFF8 /* Alamofire.framework */; };
 		374A4BB920D21581004DDFF8 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374A4BB720D21581004DDFF8 /* AlamofireImage.framework */; };
@@ -20,10 +17,6 @@
 		374A4BC520D76388004DDFF8 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BC420D76388004DDFF8 /* OverviewViewController.swift */; };
 		374A4BC720D76397004DDFF8 /* OverviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374A4BC620D76397004DDFF8 /* OverviewViewController.storyboard */; };
 		374A4BC920D7A78C004DDFF8 /* UIView + Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BC820D7A78C004DDFF8 /* UIView + Base.swift */; };
-		374A4BCD20D89182004DDFF8 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BCC20D89182004DDFF8 /* StatsViewController.swift */; };
-		374A4BCF20D891AB004DDFF8 /* StatsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374A4BCE20D891AB004DDFF8 /* StatsViewController.storyboard */; };
-		374A4BD120D8925B004DDFF8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A4BD020D8925B004DDFF8 /* TableViewController.swift */; };
-		374A4BD320D8926C004DDFF8 /* TableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374A4BD220D8926C004DDFF8 /* TableViewController.storyboard */; };
 		3757091A20E0B59200012B17 /* TodaysMatchesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757091920E0B59200012B17 /* TodaysMatchesRepository.swift */; };
 		37D6660B20DA5B1500EE5BB3 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6660A20DA5B1500EE5BB3 /* Statistics.swift */; };
 		37F30F7620CF66BC00C599B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30F7520CF66BC00C599B0 /* AppDelegate.swift */; };
@@ -34,10 +27,7 @@
 		37F30F8B20CF66BE00C599B0 /* footaball_2018WCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30F8A20CF66BE00C599B0 /* footaball_2018WCTests.swift */; };
 		37F30F9620CF66BE00C599B0 /* footaball_2018WCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30F9520CF66BE00C599B0 /* footaball_2018WCUITests.swift */; };
 		37F30FA520CF68F800C599B0 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30FA420CF68F800C599B0 /* ApplicationCoordinator.swift */; };
-		37F30FA720CF775000C599B0 /* DetailTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30FA620CF775000C599B0 /* DetailTabCoordinator.swift */; };
 		37F30FA920CF8E6C00C599B0 /* OverviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30FA820CF8E6C00C599B0 /* OverviewCoordinator.swift */; };
-		37F30FAB20CF927B00C599B0 /* StatsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30FAA20CF927B00C599B0 /* StatsCoordinator.swift */; };
-		37F30FAD20CF92A700C599B0 /* TableCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30FAC20CF92A700C599B0 /* TableCoordinator.swift */; };
 		37F30FAF20CFA18900C599B0 /* InfoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30FAE20CFA18900C599B0 /* InfoCoordinator.swift */; };
 		37F30FB320CFA3CD00C599B0 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30FB220CFA3CD00C599B0 /* ScheduleViewController.swift */; };
 		37F30FB520CFA3D900C599B0 /* ScheduleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F30FB420CFA3D900C599B0 /* ScheduleViewController.storyboard */; };
@@ -72,9 +62,6 @@
 
 /* Begin PBXFileReference section */
 		370E09FB20DB35A70023AC0D /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
-		370E0A0020DC9CAC0023AC0D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		370E0A0220DC9CC70023AC0D /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
-		370E0A0420DCA16C0023AC0D /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		374A4BB420D20C13004DDFF8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		374A4BB620D21581004DDFF8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		374A4BB720D21581004DDFF8 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
@@ -84,10 +71,6 @@
 		374A4BC420D76388004DDFF8 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		374A4BC620D76397004DDFF8 /* OverviewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OverviewViewController.storyboard; sourceTree = "<group>"; };
 		374A4BC820D7A78C004DDFF8 /* UIView + Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Base.swift"; sourceTree = "<group>"; };
-		374A4BCC20D89182004DDFF8 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
-		374A4BCE20D891AB004DDFF8 /* StatsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StatsViewController.storyboard; sourceTree = "<group>"; };
-		374A4BD020D8925B004DDFF8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		374A4BD220D8926C004DDFF8 /* TableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableViewController.storyboard; sourceTree = "<group>"; };
 		3757091920E0B59200012B17 /* TodaysMatchesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysMatchesRepository.swift; sourceTree = "<group>"; };
 		37D6660A20DA5B1500EE5BB3 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		37F30F7220CF66BC00C599B0 /* footaball 2018WC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "footaball 2018WC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,10 +87,7 @@
 		37F30F9520CF66BE00C599B0 /* footaball_2018WCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footaball_2018WCUITests.swift; sourceTree = "<group>"; };
 		37F30F9720CF66BE00C599B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37F30FA420CF68F800C599B0 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
-		37F30FA620CF775000C599B0 /* DetailTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTabCoordinator.swift; sourceTree = "<group>"; };
 		37F30FA820CF8E6C00C599B0 /* OverviewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCoordinator.swift; sourceTree = "<group>"; };
-		37F30FAA20CF927B00C599B0 /* StatsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCoordinator.swift; sourceTree = "<group>"; };
-		37F30FAC20CF92A700C599B0 /* TableCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCoordinator.swift; sourceTree = "<group>"; };
 		37F30FAE20CFA18900C599B0 /* InfoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCoordinator.swift; sourceTree = "<group>"; };
 		37F30FB220CFA3CD00C599B0 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		37F30FB420CFA3D900C599B0 /* ScheduleViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScheduleViewController.storyboard; sourceTree = "<group>"; };
@@ -152,15 +132,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		370E09FF20DC9C8C0023AC0D /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				370E0A0020DC9CAC0023AC0D /* LoginViewController.swift */,
-				370E0A0220DC9CC70023AC0D /* LoginViewController.storyboard */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		374A4BB320D20B4B004DDFF8 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,24 +157,6 @@
 				374A4BC620D76397004DDFF8 /* OverviewViewController.storyboard */,
 			);
 			path = OverView;
-			sourceTree = "<group>";
-		};
-		374A4BCA20D89135004DDFF8 /* Stats */ = {
-			isa = PBXGroup;
-			children = (
-				374A4BCC20D89182004DDFF8 /* StatsViewController.swift */,
-				374A4BCE20D891AB004DDFF8 /* StatsViewController.storyboard */,
-			);
-			path = Stats;
-			sourceTree = "<group>";
-		};
-		374A4BCB20D89157004DDFF8 /* Table */ = {
-			isa = PBXGroup;
-			children = (
-				374A4BD020D8925B004DDFF8 /* TableViewController.swift */,
-				374A4BD220D8926C004DDFF8 /* TableViewController.storyboard */,
-			);
-			path = Table;
 			sourceTree = "<group>";
 		};
 		37F30F6920CF66BC00C599B0 = {
@@ -270,12 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				37F30FA420CF68F800C599B0 /* ApplicationCoordinator.swift */,
-				37F30FA620CF775000C599B0 /* DetailTabCoordinator.swift */,
 				37F30FA820CF8E6C00C599B0 /* OverviewCoordinator.swift */,
-				37F30FAA20CF927B00C599B0 /* StatsCoordinator.swift */,
-				37F30FAC20CF92A700C599B0 /* TableCoordinator.swift */,
 				37F30FAE20CFA18900C599B0 /* InfoCoordinator.swift */,
-				370E0A0420DCA16C0023AC0D /* LoginCoordinator.swift */,
 			);
 			path = ApplicationCoordinator;
 			sourceTree = "<group>";
@@ -283,9 +232,6 @@
 		37F30FB120CFA39200C599B0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				370E09FF20DC9C8C0023AC0D /* Login */,
-				374A4BCB20D89157004DDFF8 /* Table */,
-				374A4BCA20D89135004DDFF8 /* Stats */,
 				374A4BC320D762C9004DDFF8 /* OverView */,
 				37F30FCC20D0AA4C00C599B0 /* Info */,
 				37F30FB620CFA3DE00C599B0 /* Schedule */,
@@ -468,11 +414,8 @@
 				37F30FC220CFB8E100C599B0 /* ScheduleCollectionViewCell.xib in Resources */,
 				37F30FB520CFA3D900C599B0 /* ScheduleViewController.storyboard in Resources */,
 				374A4BC720D76397004DDFF8 /* OverviewViewController.storyboard in Resources */,
-				374A4BCF20D891AB004DDFF8 /* StatsViewController.storyboard in Resources */,
 				37F30F8020CF66BE00C599B0 /* LaunchScreen.storyboard in Resources */,
-				374A4BD320D8926C004DDFF8 /* TableViewController.storyboard in Resources */,
 				37F30FD020D0AA7A00C599B0 /* InfoViewController.storyboard in Resources */,
-				370E0A0320DC9CC70023AC0D /* LoginViewController.storyboard in Resources */,
 				37F30F7D20CF66BE00C599B0 /* Assets.xcassets in Resources */,
 				37F30F7B20CF66BC00C599B0 /* Main.storyboard in Resources */,
 			);
@@ -519,33 +462,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				374A4BD120D8925B004DDFF8 /* TableViewController.swift in Sources */,
 				37F30FD320D11F0600C599B0 /* ScheduleSectionController.swift in Sources */,
 				37F30FAF20CFA18900C599B0 /* InfoCoordinator.swift in Sources */,
-				37F30FAB20CF927B00C599B0 /* StatsCoordinator.swift in Sources */,
 				37F30FCB20CFCA5600C599B0 /* Entity.swift in Sources */,
 				37F30F7820CF66BC00C599B0 /* ViewController.swift in Sources */,
-				370E0A0520DCA16C0023AC0D /* LoginCoordinator.swift in Sources */,
 				374A4BB520D20C13004DDFF8 /* Team.swift in Sources */,
 				37F30FCE20D0AA6600C599B0 /* InfoViewController.swift in Sources */,
 				374A4BC220D2575A004DDFF8 /* MatchesRepository.swift in Sources */,
 				37F30FB320CFA3CD00C599B0 /* ScheduleViewController.swift in Sources */,
-				37F30FAD20CF92A700C599B0 /* TableCoordinator.swift in Sources */,
 				37F30FB920CFB15800C599B0 /* UIViewController + Base.swift in Sources */,
 				3757091A20E0B59200012B17 /* TodaysMatchesRepository.swift in Sources */,
 				374A4BC920D7A78C004DDFF8 /* UIView + Base.swift in Sources */,
-				374A4BCD20D89182004DDFF8 /* StatsViewController.swift in Sources */,
 				37F30FA920CF8E6C00C599B0 /* OverviewCoordinator.swift in Sources */,
 				37F30F7620CF66BC00C599B0 /* AppDelegate.swift in Sources */,
 				374A4BBE20D2543D004DDFF8 /* BaseRepository.swift in Sources */,
 				37F30FA520CF68F800C599B0 /* ApplicationCoordinator.swift in Sources */,
 				370E09FC20DB35A70023AC0D /* Match.swift in Sources */,
-				37F30FA720CF775000C599B0 /* DetailTabCoordinator.swift in Sources */,
 				37F30FC120CFB8E100C599B0 /* ScheduleCollectionViewCell.swift in Sources */,
 				374A4BC520D76388004DDFF8 /* OverviewViewController.swift in Sources */,
 				37F30FC920CFC78C00C599B0 /* Fixture.swift in Sources */,
 				37D6660B20DA5B1500EE5BB3 /* Statistics.swift in Sources */,
-				370E0A0120DC9CAC0023AC0D /* LoginViewController.swift in Sources */,
 				37F30FBB20CFB31300C599B0 /* NSObject + Base.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

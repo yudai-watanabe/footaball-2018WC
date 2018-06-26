@@ -22,7 +22,6 @@ class ApplicationCoordinator: Coordinator {
     let infoNavigationController = UINavigationController()
     
     let infoCoordinator: InfoCoordinator
-    let loginCoordinator: LoginCoordinator
     let overviewCoordinator: OverviewCoordinator
 
     
@@ -32,7 +31,6 @@ class ApplicationCoordinator: Coordinator {
         }
         self.window = window
         self.infoCoordinator = InfoCoordinator(presenter: rootViewController)
-        self.loginCoordinator = LoginCoordinator(window: self.window)
         self.overviewCoordinator = OverviewCoordinator(presenter: rootViewController)
         scheduleViewController.delegate = self
         self.rootViewController.pushViewController(scheduleViewController, animated: false)
@@ -48,13 +46,10 @@ class ApplicationCoordinator: Coordinator {
 extension ApplicationCoordinator: ScheduleViewControllerDelegate {
     func scheduleViewController(_ viewController: ScheduleViewController, tapped schedule: Schedule) {
         overviewCoordinator.start(schedule: schedule)
-//        let detailTabCoordinator = DetailTabCoordinator(window: self.window, schedule: schedule)
-//        detailTabCoordinator.start()
     }
     
     func scheduleViewController(_ viewController: ScheduleViewController, tapped infoButton: UIButton) {
         self.infoCoordinator.start()
-//        self.loginCoordinator.start()
     }
     
 }
